@@ -1,13 +1,31 @@
-<div class="toolbar" role="banner">
-  <app-child (selected)="onSelected($event)"></app-child>
+<main class="page-container">
+  <header>
+    <h1>Demo - Status do Toogle</h1>
+    <p>
+      Alteração de status do toggle por child component ou pelo evento de clique
+      do botão que encontra-se no componente pai.
+    </p>
+  </header>
 
-  <mat-slide-toggle [(ngModel)]="toggleValue">Toggle me!</mat-slide-toggle>
+  <section class="container-wrapper">
+    <app-child (selected)="onSelected($event)"></app-child>
 
-  <button (click)="onClick()">Mudar</button>
+    <div class="parent-components">
+      <h2>Parent Components</h2>
 
-  <p>
-    {{ toggleValue }}
-  </p>
-</div>
+      <div class="toggle-container">
+        <button (click)="onClick()">Mudar</button>
+
+        <h3>Resultado</h3>
+
+        <mat-slide-toggle [(ngModel)]="toggleValue"
+          >Toggle me!</mat-slide-toggle
+        >
+
+        <p>Toggle alterado: {{ toggleValue ? "Sim" : "Não" }}</p>
+      </div>
+    </div>
+  </section>
+</main>
 
 <router-outlet></router-outlet>

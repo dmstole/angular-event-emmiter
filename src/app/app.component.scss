@@ -1,0 +1,43 @@
+.page-container {
+  width: 50%;
+  margin: 0 auto;
+
+  header {
+    padding: 2rem 0;
+
+    h1 {
+      padding: 0;
+      margin: 0;
+    }
+
+    p {
+      font-style: italic;
+    }
+  }
+
+  .parent-components {
+    margin-top: 2rem;
+
+    .toggle-container {
+      display: flex;
+      flex-direction: column;
+
+      * {
+        margin-bottom: .8rem;
+      }
+
+      button {
+        padding: 1rem;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        border: solid 1px #c9c9c9;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

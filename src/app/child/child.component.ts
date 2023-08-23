@@ -13,6 +13,6 @@ export class ChildComponent {
 
   onEmitValue() {
     this.sendable = !this.sendable;
-    this.selected.emit(!this.sendable);
+    this.selected.emit(this.sendable);
   }
 }
